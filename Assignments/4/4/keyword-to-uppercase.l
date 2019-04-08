@@ -12,6 +12,8 @@ keyword auto|break|case|char|const|continue|printf|default|do|double|else|enum|e
   }
 %%
 
+int yywrap(){}
+
 int main()
 {
 yyin=fopen("sample.c","r");

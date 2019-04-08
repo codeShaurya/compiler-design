@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 9
-#define YY_END_OF_BUFFER 10
+#define YY_NUM_RULES 3
+#define YY_END_OF_BUFFER 4
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -362,8 +362,8 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[15] =
     {   0,
-        0,    0,   10,    9,    8,    6,    7,    4,    2,    3,
-        5,    1,    1,    0
+        0,    0,    4,    2,    2,    0,    0,    0,    0,    0,
+        0,    1,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -371,17 +371,17 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    3,
-        4,    5,    6,    1,    7,    1,    8,    9,    9,    9,
-        9,    9,    9,    9,    9,    9,    9,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        1,    1,    1,    1,    1,    1,    3,    3,    3,    3,
 
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -398,35 +398,35 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[10] =
+static const YY_CHAR yy_meta[4] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1
+        1,    1,    2
     } ;
 
-static const flex_int16_t yy_base[15] =
+static const flex_int16_t yy_base[23] =
     {   0,
-        0,    0,   12,   13,   13,   13,   13,   13,   13,   13,
-       13,    2,    1,   13
+        0,    0,   12,   13,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,   13,    9,    8,    7,    6,    5,    4,
+        3,    2
     } ;
 
-static const flex_int16_t yy_def[15] =
+static const flex_int16_t yy_def[23] =
     {   0,
-       14,    1,   14,   14,   14,   14,   14,   14,   14,   14,
-       14,   14,   14,    0
-    } ;
-
-static const flex_int16_t yy_nxt[23] =
-    {   0,
-        4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
-       13,   14,    3,   14,   14,   14,   14,   14,   14,   14,
+       14,    1,   14,   14,   15,   16,   17,   18,   19,   20,
+       21,   22,   22,    0,   14,   14,   14,   14,   14,   14,
        14,   14
     } ;
 
-static const flex_int16_t yy_chk[23] =
+static const flex_int16_t yy_nxt[17] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,   13,
-       12,    3,   14,   14,   14,   14,   14,   14,   14,   14,
-       14,   14
+        4,    4,    5,   13,   12,   11,   10,    9,    8,    7,
+        6,   14,    3,   14,   14,   14
+    } ;
+
+static const flex_int16_t yy_chk[17] =
+    {   0,
+        1,    1,    1,   22,   21,   20,   19,   18,   17,   16,
+       15,    3,   14,   14,   14,   14
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -443,11 +443,14 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "calc.l"
-#line 2 "calc.l"
-    #include "y.tab.c"
-#line 450 "lex.yy.c"
-#line 451 "lex.yy.c"
+#line 1 "find-longest-word.l"
+#line 2 "find-longest-word.l"
+	#include<stdio.h>
+	#include<string.h>
+
+	char* longest;
+#line 453 "lex.yy.c"
+#line 454 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -664,9 +667,10 @@ YY_DECL
 		}
 
 	{
-#line 4 "calc.l"
+#line 8 "find-longest-word.l"
 
-#line 670 "lex.yy.c"
+
+#line 674 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -725,51 +729,27 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 5 "calc.l"
-{return id;}
+#line 10 "find-longest-word.l"
+{
+	if(yyleng > strlen(longest))
+	{
+	longest=(char*)realloc(longest,yyleng+1);
+	strcpy(longest,yytext);
+	}
+	}
 	YY_BREAK
 case 2:
+/* rule 2 can match eol */
 YY_RULE_SETUP
-#line 6 "calc.l"
-{return plus;}
+#line 17 "find-longest-word.l"
+
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 7 "calc.l"
-{return minus;}
-	YY_BREAK
-case 4:
-YY_RULE_SETUP
-#line 8 "calc.l"
-{return mul;}
-	YY_BREAK
-case 5:
-YY_RULE_SETUP
-#line 9 "calc.l"
-{return divide;}
-	YY_BREAK
-case 6:
-YY_RULE_SETUP
-#line 10 "calc.l"
-{return op;}
-	YY_BREAK
-case 7:
-YY_RULE_SETUP
-#line 11 "calc.l"
-{return cl;}
-	YY_BREAK
-case 8:
-/* rule 8 can match eol */
-YY_RULE_SETUP
-#line 12 "calc.l"
-{return ln;}
-	YY_BREAK
-case 9:
-YY_RULE_SETUP
-#line 13 "calc.l"
+#line 18 "find-longest-word.l"
 ECHO;
 	YY_BREAK
-#line 773 "lex.yy.c"
+#line 753 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1774,5 +1754,41 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 13 "calc.l"
+#line 18 "find-longest-word.l"
+
+
+char *strrev(char *str)
+{
+	char *p1, *p2;
+
+	if (! str || ! *str)
+	return str;
+	for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
+	{
+	*p1 ^= *p2;
+	*p2 ^= *p1;
+	*p1 ^= *p2;
+	}
+	return str;
+}
+
+int yywrap(){}
+
+	int main()
+	{
+	longest=(char*)malloc(1);
+	longest[0]='\0';
+	FILE *fp;
+	char file[10];
+	printf("\nEnter the filename: ");
+	scanf("%s", file);
+	fp=fopen(file,"r");
+	yyin=fp;
+	yylex();
+	printf("Longest string is '%s'\n",longest);
+	strrev(longest);
+	printf("After reverse of a string: '%s'\n",longest);
+	free(longest);
+	return 0;
+	}
 

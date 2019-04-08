@@ -12,6 +12,9 @@ start      ^ab
 .    ;
 
 %%
+
+int yywrap(){}
+
 int main()
 {
     FILE *fp;

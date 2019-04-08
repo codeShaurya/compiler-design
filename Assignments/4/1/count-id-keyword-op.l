@@ -4,17 +4,22 @@ int Count=0;
 int keyCount=0;
 int opCount=0;
 %}
+
 op [-+*/]
 letters [a-zA-Z]
 digitt [0-9]
 id {letters}*|({letters}{digitt})+
 notid ({op})
+
 %%
 [\t\n]+
 {notid} {printf("%s is an operator\n", yytext); opCount++;}
 ("int")|("float")|("char")|("case")|("default")|("if")|("for")|("printf")|("scanf") {printf("%s is a keyword\n", yytext); keyCount++;}
 {id} {printf("%s is an identifier\n", yytext); Count++;}
 %%
+
+int yywrap(){}
+
 int main()
 {
 FILE *fp;

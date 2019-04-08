@@ -31,6 +31,8 @@ for(i=0;i<n;i++)
 [+-] {}
 %%
 
+int yywrap(){}
+
 int main()
 {
 FILE *fp;

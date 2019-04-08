@@ -10,8 +10,8 @@ letter [a-zA-Z]
 digitt [0-9]
 id ({letter}{digitt}{op})+
 notid (op)
-
 %%
+
 [\t\n]+
 ("int")|("float")|("char")|("case")|("default")|("if")|("for")|("printf")|("scanf") {
 int n=strlen(yytext);
@@ -35,6 +35,8 @@ for(i=0;i<n;i++)
 s[l++]=' ';
 }
 %%
+
+int yywrap(){}
 
 int main()
 {
